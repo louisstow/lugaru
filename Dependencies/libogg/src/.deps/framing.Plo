@@ -1,0 +1,55 @@
+framing.lo: framing.c \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/stdlib.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdlib.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/features.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/alltypes.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/alloca.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/string.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/string.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/strings.h \
+  ../include/ogg/ogg.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stddef.h \
+  ../include/ogg/os_types.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/sys/types.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/endian.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdint.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/stdint.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/sys/select.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/sys/sysmacros.h \
+  ../include/ogg/config_types.h
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/stdlib.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdlib.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/features.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/alltypes.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/alloca.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/string.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/string.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/strings.h:
+
+../include/ogg/ogg.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stddef.h:
+
+../include/ogg/os_types.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/sys/types.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/endian.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdint.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/stdint.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/sys/select.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/sys/sysmacros.h:
+
+../include/ogg/config_types.h:

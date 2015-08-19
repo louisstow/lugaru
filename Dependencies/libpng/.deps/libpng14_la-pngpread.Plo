@@ -1,0 +1,91 @@
+libpng14_la-pngpread.lo: pngpread.c png.h ../zlib/zlib.h ../zlib/zconf.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/sys/types.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/features.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/alltypes.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/endian.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdint.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/stdint.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/sys/select.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/sys/sysmacros.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/unistd.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/posix.h \
+  pngconf.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/limits.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/limits.h \
+  config.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdio.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/setjmp.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/setjmp.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/string.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/string.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/strings.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/time.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/time.h \
+  pngpriv.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/stdlib.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdlib.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/alloca.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/math.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/math.h
+
+png.h:
+
+../zlib/zlib.h:
+
+../zlib/zconf.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/sys/types.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/features.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/alltypes.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/endian.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdint.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/stdint.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/sys/select.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/sys/sysmacros.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/unistd.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/posix.h:
+
+pngconf.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/limits.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/limits.h:
+
+config.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdio.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/setjmp.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/setjmp.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/string.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/string.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/strings.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/time.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/time.h:
+
+pngpriv.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/stdlib.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdlib.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/alloca.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/math.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/math.h:

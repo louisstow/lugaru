@@ -1,0 +1,44 @@
+jcmainct.lo: jcmainct.c jinclude.h jconfig.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stddef.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/alltypes.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/stdlib.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdlib.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/features.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/alloca.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdio.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/string.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/string.h \
+  /Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/strings.h \
+  jpeglib.h jmorecfg.h jpegint.h jerror.h
+
+jinclude.h:
+
+jconfig.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stddef.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/bits/alltypes.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/stdlib.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdlib.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/features.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/alloca.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/stdio.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/compat/string.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/string.h:
+
+/Users/louis/Projects/emscripten/emsdk_portable/emscripten/tag-1.34.1/system/include/libc/strings.h:
+
+jpeglib.h:
+
+jmorecfg.h:
+
+jpegint.h:
+
+jerror.h:
