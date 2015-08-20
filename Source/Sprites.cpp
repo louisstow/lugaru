@@ -163,8 +163,8 @@ void Sprites::Draw()
 			if(blend){
 				blend=0;
 				glAlphaFunc(GL_GREATER, 0.3);
-				glBlendFunc(GL_ONE,GL_ZERO);
-				//glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
+				// glBlendFunc(GL_ONE,GL_ZERO);
+				glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 			}
 		}
 		if(type[i]!=snowsprite)distancemult=(viewdistsquared-(findDistancefast(&viewer,&position[i])-(viewdistsquared*fadestart))*(1/(1-fadestart)))/viewdistsquared;
