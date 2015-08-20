@@ -147,7 +147,7 @@ $(obj)/glues.bc: ./Dependencies/glues/source/glues_mipmap.c
 	em++ $(COMMONFLAGS) ./Dependencies/glues/source/glues_mipmap.c -I./Dependencies/glues/source -o $(obj)/glues.bc
 
 all: $(obj)/jpeg.bc $(obj)/png.bc $(obj)/glues.bc
-	em++ $(COMMONFLAGS) -s LEGACY_GL_EMULATION=1 -s TOTAL_MEMORY=95829120 -s GL_ASSERTIONS=1 -s GL_UNSAFE_OPTS=0 -s GL_FFP_ONLY=1 $(obj)/jpeg.bc $(obj)/png.bc $(obj)/glues.bc ./Dependencies/zlib/libz.a $(SRCS) -I$(SRCDIR) -I$(ZLIBDIR) -I$(JPEGLIBDIR) -I$(LIBPNGDIR) -I./Dependencies/glues/source --preload-file Data --pre-js pre.js -o build/lugaru.html
+	em++ $(COMMONFLAGS) -s LEGACY_GL_EMULATION=1 -s TOTAL_MEMORY=120000000 -s GL_FFP_ONLY=1 $(obj)/jpeg.bc $(obj)/png.bc $(obj)/glues.bc ./Dependencies/zlib/libz.a $(SRCS) -I$(SRCDIR) -I$(ZLIBDIR) -I$(JPEGLIBDIR) -I$(LIBPNGDIR) -I./Dependencies/glues/source --preload-file Data --shell-file shell.html -o build/lugaru.html
 
 clean:
 	rm $(obj)/*.bc
