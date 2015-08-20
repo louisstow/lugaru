@@ -125,6 +125,28 @@ void LOG(const std::string &fmt, ...)
 
 
 Game::TextureList Game::textures;
+std::list<GLuint> Game::textures_gc;
+
+void Game::Unload ()
+{
+	if (textures_gc.size()) {
+		std::list<GLuint>::iterator it = textures_gc.begin();
+		for (; it != textures_gc.end(); ++it)
+		{
+			if (glIsTexture(*it)) {
+				fprintf(stderr, "DELTE TEX: %d\n", *it);
+				glDeleteTextures(1, &(*it));
+			}
+		}
+		textures_gc.clear();
+	}
+
+	// if (texture.data)
+	// {
+	// 	free(texture.data);
+	// }
+	// texture.data = 0;
+}
 
 void Game::Dispose()
 {
@@ -197,31 +219,30 @@ void Game::Dispose()
 
 	LOG("Shutting down sound system...");
 
-	OPENAL_StopSound(OPENAL_ALL);
+	// OPENAL_StopSound(OPENAL_ALL);
 
 // this is causing problems on Linux, but we'll force an _exit() a little
 //  later in the shutdown process.  --ryan.
-#if !PLATFORM_LINUX
-#define streamcount 20
-#define samplecount 100
+// #if !PLATFORM_LINUX
+// #define streamcount 20
+// #define samplecount 100
 
-	for (i=0; i < samplecount; ++i)
-	{
-		OPENAL_Sample_Free(samp[i]);
-	}
+	// for (i=0; i < samplecount; ++i)
+	// {
+	// 	OPENAL_Sample_Free(samp[i]);
+	// }
 
-	for (i=0; i < streamcount; ++i)
-	{
-		OPENAL_Stream_Close(strm[i]);
-	}
+	// for (i=0; i < streamcount; ++i)
+	// {
+	// 	OPENAL_Stream_Close(strm[i]);
+	// }
 
-	OPENAL_Close();
+	// OPENAL_Close();
 	if (texture.data)
 	{
 		free(texture.data);
 	}
 	texture.data = 0;
-#endif
 }
 
 
@@ -421,7 +442,7 @@ void Game::LoadSounds()
 	OPENAL_Sample_SetMinMaxDistance(samp[staffbreaksound], 8.0f, 2000.0f);
 }
 
-void Game::LoadTexture(const char *fileName, GLuint *textureid,int mipmap, bool hasalpha)
+void Game::LoadTexture(const char *fileName, GLuint *textureid,int mipmap, bool hasalpha, bool unload)
 {
 	GLuint		type;
 
@@ -429,6 +450,13 @@ void Game::LoadTexture(const char *fileName, GLuint *textureid,int mipmap, bool 
 
 	// Fix filename so that is os appropreate
 	char * fixedFN = ConvertFileName(fileName);
+
+	// check if in the cache
+	// TexIter it = textures.find(fixedFN);
+	// if (it != textures.end()) {
+	// 	*textureid = it->second;
+	// 	return;
+	// }
 
 	//fprintf(stderr, "Fixed FN: %s\n", fixedFN);
 	
@@ -469,7 +497,7 @@ void Game::LoadTexture(const char *fileName, GLuint *textureid,int mipmap, bool 
 
 		gluBuild2DMipmaps( GL_TEXTURE_2D, type, texture.sizeX, texture.sizeY, type, GL_UNSIGNED_BYTE, texture.data );
 
-//		textures.insert(std::make_pair(fname, *textureid));
+		// textures.insert(std::make_pair(fixedFN, *textureid));
 	}
 //	else
 //	{

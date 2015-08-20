@@ -64,6 +64,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include "Weapons.h"
 #include "binio.h"
 #include <fstream>
+#include <list>
 
 extern GLuint rabbittexture;
 
@@ -75,6 +76,7 @@ public:
 	typedef std::map<GLuint, std::string> GLTextureList;
 	typedef TextureList::iterator TexIter;
 	static TextureList textures;
+	static std::list<GLuint> textures_gc;
 
 	GLuint terraintexture;
 	GLuint terraintexture2;
@@ -239,7 +241,7 @@ public:
 	bool oldattackkey;
 
 	long long MD5_string (char *string);
-	static void LoadTexture(const char *fileName, GLuint *textureid,int mipmap, bool hasalpha);
+	static void LoadTexture(const char *fileName, GLuint *textureid,int mipmap, bool hasalpha, bool unload=0);
 	static void LoadTextureSave(const char *fileName, GLuint *textureid,int mipmap,GLubyte *array, int *skinsize);
 	void LoadSave(const char *fileName, GLuint *textureid,bool mipmap,GLubyte *array, int *skinsize);
 	bool AddClothes(const char *fileName, GLuint *textureid,bool mipmap,GLubyte *array, int *skinsize);
@@ -247,6 +249,7 @@ public:
 	void LoadStuff();
 	void LoadingScreen();
 	void FadeLoadingScreen(float howmuch);
+	void Unload();
 	void Dispose();
 	int DrawGLScene(void);
 	void Tick();
