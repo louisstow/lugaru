@@ -147,11 +147,11 @@ void Objects::Draw()
 					if(distance>1)distance=1;
 					if(distance>0){
 
-						/*if(checkcollide(viewer,DoRotation(model[i].vertex[model[i].vertexNum],0,rotation[i],0)*scale[i]+position[i],i)){
-						occluded[i]+=1;
-						}
-						else occluded[i]=0;*/
-						if(occluded[i]<6){
+						// if(checkcollide(viewer,DoRotation(model[i].vertex[model[i].vertexNum],0,rotation[i],0)*scale[i]+position[i],i)){
+						// occluded[i]+=1;
+						// }
+						// else occluded[i]=0;
+						if(1==1||occluded[i]<6){
 							glMatrixMode(GL_MODELVIEW);							// Select The Modelview Matrix
 							glPushMatrix();
 								if(!model[i].color)glEnable(GL_LIGHTING);
@@ -510,7 +510,7 @@ void Objects::Draw()
 									glColor4f(terrainlight.x,terrainlight.y,terrainlight.z,.3);
 									glAlphaFunc(GL_GREATER, 0);
 									// glDisable(GL_ALPHA_TEST);
-									// model[i].drawdifftex(treetextureptr);
+									model[i].drawdifftex(treetextureptr);
 								}
 								if(type[i]==bushtype){
 									glDisable(GL_CULL_FACE);
