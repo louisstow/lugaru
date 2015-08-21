@@ -316,7 +316,7 @@ void Objects::Draw()
 									glEnable(GL_CULL_FACE);
 									glAlphaFunc(GL_GREATER, 0.1);
 									model[i].drawdifftex(boxtextureptr);
-									model[i].drawdecals(terrain.shadowtexture,terrain.bloodtexture,terrain.bloodtexture2,terrain.breaktexture);
+									// model[i].drawdecals(terrain.shadowtexture,terrain.bloodtexture,terrain.bloodtexture2,terrain.breaktexture);
 								}
 								if(type[i]==rocktype){
 									glEnable(GL_CULL_FACE);

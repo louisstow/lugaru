@@ -506,14 +506,11 @@ int Game::DrawGLScene(void)
 		glEnable(GL_TEXTURE_2D);
 		glDepthMask(1);
 		glEnable(GL_DEPTH_TEST);
-		glEnable(GL_CULL_FACE);
+		glDisable(GL_CULL_FACE);
 		// glDisable(GL_BLEND);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT); 
 		glBindTexture( GL_TEXTURE_2D, terraintexture);
-		if (terraintexture == 0) {
-			fprintf(stderr, "TERRAIN TEXTURE DOESNT EXIST\n");
-		}
 
 		terrain.draw(0);
 		glBindTexture( GL_TEXTURE_2D, terraintexture2);
@@ -522,7 +519,7 @@ int Game::DrawGLScene(void)
 		//glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 		//terrain.draw(2);
 
-		terrain.drawdecals();
+		// terrain.drawdecals();
 
 		//Model
 		glEnable(GL_CULL_FACE);
@@ -579,9 +576,11 @@ int Game::DrawGLScene(void)
 		else playerdist=-100;
 
 		glPushMatrix();
-		glCullFace(GL_BACK);
 		glEnable(GL_TEXTURE_2D);
+		glEnable(GL_CULL_FACE);
+		glCullFace(GL_BACK);
 		objects.Draw();
+		// glEnable(GL_CULL_FACE);
 		glPopMatrix();		
 
 		glPushMatrix();
@@ -658,6 +657,7 @@ int Game::DrawGLScene(void)
 		glEnable(GL_TEXTURE_2D);
 		weapons.Draw();
 		glPopMatrix();
+		glEnable(GL_CULL_FACE);
 		glCullFace(GL_BACK);
 
 		glDisable(GL_COLOR_MATERIAL);
