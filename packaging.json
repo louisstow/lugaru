@@ -1,0 +1,19 @@
+[
+	[
+		"./Data/Textures/Cursor.png",
+		"./Data/Textures/MapCircle.png",
+		"./Data/Textures/MapBox.png",
+		"./Data/Textures/MapArrow.png",
+		"./Data/Textures/Lugaru.png",
+		"./Data/Textures/Newgame.png",
+		"./Data/Textures/Options.png",
+		"./Data/Textures/Quit.png",
+		"./Data/Textures/World.png",
+		"./Data/Textures/Eyelid.png",
+		"./Data/Textures/Font.png"
+	],
+
+	[
+		"./Data"
+	]
+]
