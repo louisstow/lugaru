@@ -10,7 +10,13 @@
 		"./Data/Textures/Quit.png",
 		"./Data/Textures/World.png",
 		"./Data/Textures/Eyelid.png",
-		"./Data/Textures/Font.png"
+		"./Data/Textures/Font.png",
+		"./Data/Maps",
+		"./Data/Models",
+		"./Data/Campaigns",
+		"./Data/Dialogues",
+		"./Data/config.txt",
+		"./Data/Users"
 	],
 
 	[
