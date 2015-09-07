@@ -25,6 +25,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include <ctime>
 #include "Game.h"
 #include "openal_wrapper.h"
+#include "emscripten.h"
 
 using namespace std;
 
@@ -3312,7 +3313,23 @@ void	Game::Tick()
 				endgame=0;
 			}
 
-			if(Button()&&!oldbutton&&selected==1){
+      int assetsloaded = EM_ASM_INT({
+        return ASSETS_LOADED;
+      }, 1);
+
+      if (!assetsloaded&&Button()&&!oldbutton&&selected==1) {
+        EM_ASM(
+          Module.notify(0);
+        );
+      }
+
+      if (!assetsloaded&&Button()&&!oldbutton&&selected-7>=accountcampaignchoicesmade[accountactive]) {
+        EM_ASM(
+          Module.notify(0);
+        );
+      }
+
+			if(assetsloaded&&Button()&&!oldbutton&&selected==1){
 				float gLoc[3]={0,0,0};
 				float vel[3]={0,0,0};
 				OPENAL_Sample_SetMinMaxDistance(samp[firestartsound], 9999.0f, 99999.0f);
@@ -3343,7 +3360,7 @@ void	Game::Tick()
 				gameon=1;
 				OPENAL_SetPaused(channels[stream_music3], true);
 			}
-			if(Button()&&!oldbutton&&selected-7>=accountcampaignchoicesmade[accountactive]){//selected>=7&&(selected-7<=campaignnumchoices)){
+			if(assetsloaded&&Button()&&!oldbutton&&selected-7>=accountcampaignchoicesmade[accountactive]){//selected>=7&&(selected-7<=campaignnumchoices)){
 				float gLoc[3]={0,0,0};
 				float vel[3]={0,0,0};
 				OPENAL_Sample_SetMinMaxDistance(samp[firestartsound], 9999.0f, 99999.0f);
@@ -3470,7 +3487,17 @@ void	Game::Tick()
 			else oldbutton=0;
 		}
 		if(mainmenu==9){
-			if(Button()&&!oldbutton&&selected<numchallengelevels&&selected>=0&&selected<=accountprogress[accountactive]){
+      int assetsloaded = EM_ASM_INT({
+        return ASSETS_LOADED;
+      }, 1);
+
+      if(!assetsloaded&&Button()&&!oldbutton&&selected<numchallengelevels&&selected>=0&&selected<=accountprogress[accountactive]){
+        EM_ASM(
+          Module.notify(0);
+        );
+      }
+
+			if(assetsloaded&&Button()&&!oldbutton&&selected<numchallengelevels&&selected>=0&&selected<=accountprogress[accountactive]){
 				float gLoc[3]={0,0,0};
 				float vel[3]={0,0,0};
 				OPENAL_Sample_SetMinMaxDistance(samp[firestartsound], 9999.0f, 99999.0f);
@@ -3491,16 +3518,19 @@ void	Game::Tick()
 				loading=2;
 				loadtime=0;
 				targetlevel=selected;
-				if(firstload)TickOnceAfter();
-				if(!firstload)LoadStuff();
-				else {
-					Loadlevel(selected);
-				}
-				campaign=0;
 
-				mainmenu=0;
-				gameon=1;
-				OPENAL_SetPaused(channels[stream_music3], true);
+        
+  				if(firstload)TickOnceAfter();
+  				if(!firstload)LoadStuff();
+  				else {
+  					Loadlevel(selected);
+  				}
+  				campaign=0;
+
+  				mainmenu=0;
+  				gameon=1;
+  				OPENAL_SetPaused(channels[stream_music3], true);
+        
 			}
 			if(Button()&&!oldbutton&&selected==numchallengelevels){
 				float gLoc[3]={0,0,0};
@@ -3524,7 +3554,17 @@ void	Game::Tick()
 			else oldbutton=0;
 		}
 		if(mainmenu==11){
-			if(Button()&&!oldbutton&&selected<numchallengelevels&&selected>=0&&selected<=accountprogress[accountactive]){
+      int assetsloaded = EM_ASM_INT({
+        return ASSETS_LOADED;
+      }, 1);
+
+      if(!assetsloaded&&Button()&&!oldbutton&&selected<numchallengelevels&&selected>=0&&selected<=accountprogress[accountactive]){
+        EM_ASM(
+          Module.notify(0);
+        );
+      }
+
+			if(assetsloaded&&Button()&&!oldbutton&&selected<numchallengelevels&&selected>=0&&selected<=accountprogress[accountactive]){
 				float gLoc[3]={0,0,0};
 				float vel[3]={0,0,0};
 				OPENAL_Sample_SetMinMaxDistance(samp[firestartsound], 9999.0f, 99999.0f);
