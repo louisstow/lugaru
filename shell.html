@@ -4,14 +4,25 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Lugaru</title>
-    <style>     
+    <style>
+    body { font-family: sans-serif; }     
     .screen {
       border: 1px solid black;
     }
 
     .container {
       position: relative;
-      width: 640px;
+      width: 1024px;
+      height: 768px;
+      padding: 0;
+      margin: 0;
+    }
+
+    #canvas {
+      margin: 0;
+      padding: 0;
+      width: 1024px;
+      height: 768px;
     }
 
     #status {
@@ -22,12 +33,25 @@
       color: white;
       padding: 4px; 
     }
+
+    #notice {
+      position: absolute;
+      background: rgba(255,255,255,0.6);
+      color: black;
+      padding: 8px;
+      top: 20px;
+      text-align: center;
+      display: none;
+      width: 100%;
+      font-size: 20px;
+    }
     </style>
   </head>
   <body>
     
     <div class="container">
       <div id="status"></div>
+      <div id="notice"></div>
       <canvas class="screen" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
     </div>
     <hr>
@@ -35,11 +59,12 @@
     <script type='text/javascript'>
       var startAsset = 1;
       var endAsset = 1;
-      var ASSETS_LOADED = false;
+      var ASSETS_LOADED = 0;
 
       function loadNext () {
         if (startAsset > endAsset) {
-          ASSETS_LOADED = true;
+          ASSETS_LOADED = 1;
+          Module.notify(1);
           return;
         }
 
@@ -50,6 +75,7 @@
       }
 
       var statusElement = document.getElementById('status');
+      var noticeElement = document.getElementById('notice');
 
       var Module = {
         preRun: [],
@@ -74,7 +100,9 @@
           var m = msg.match(/\((\d+)\/(\d+)\)/);
           if (m) {
             if (m[1] === m[2]) {
-              setTimeout(loadNext, 100);
+              setTimeout(loadNext, 0);
+              statusElement.style.display = "none";
+              return;
             }
             var n = +m[1];
             var total = +m[2];
@@ -83,6 +111,21 @@
             msg = "Downloading " + percent + "%";
           }
           statusElement.innerHTML = msg;
+          statusElement.style.display = "block";
+        },
+        notify: function (type) {
+          var m = "";
+          if (type == 0) {
+            m = "Please wait until the game assets are finished loading.";
+          } else if (type == 1) {
+            m = "Ready to play!";
+          }
+
+          noticeElement.style.display = "block";
+          noticeElement.innerHTML = m;
+          setTimeout(function () {
+            noticeElement.style.display = "none";
+          }, 3000);
         }
       };
       
