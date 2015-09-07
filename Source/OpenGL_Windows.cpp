@@ -1400,10 +1400,10 @@ int main(int argc, char **argv)
                 return 42;
 
             emscripten_set_main_loop(one_tick, 0, 1);
-            while (1) {
-                one_tick();
+            //while (1) {
+               // one_tick();
                 // SDL_Delay(time_to_next_frame());
-            }
+            //}
             /*
 			while (!gDone&&!game.quit&&(!game.tryquit))
 			{
